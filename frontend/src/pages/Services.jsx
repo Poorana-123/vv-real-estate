@@ -17,7 +17,8 @@ import {
 } from "lucide-react";
 
 import "../styles/Services.css";
-
+import Location from "../assets/Location1.jpg"
+import Guidance from "../assets/guidance.webp"
 const heroImages = [
   "https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=2000&q=90",
   "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=2000&q=90",
@@ -55,8 +56,7 @@ const services = [
     description:
       "Explore the property firsthand. We assist with arranging site visits so you can understand the location, surrounding environment, and accessibility before making a decision.",
     icon: MapPin,
-    image:
-      "https://images.unsplash.com/photo-1518005020951-eccb494ad742?auto=format&fit=crop&w=1200&q=90",
+    image:Location,
     tag: "LOCATION EXPLORATION",
   },
   {
@@ -66,8 +66,7 @@ const services = [
     description:
       "Understand the factors that matter when considering land as an investment, including location, accessibility, development surroundings, and your long-term goals.",
     icon: TrendingUp,
-    image:
-      "https://images.unsplash.com/photo-1464938050520-efc0bde5c7a1?auto=format&fit=crop&w=1200&q=90",
+    image:Guidance,
     tag: "INVESTMENT INSIGHTS",
   },
   {
