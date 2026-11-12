@@ -1,0 +1,588 @@
+/* =====================================
+   VETRI VINAYAGA FOOTER
+===================================== */
+
+.vv-footer {
+  width: 100%;
+  background: #001f45;
+  color: #ffffff;
+  overflow: hidden;
+  font-family: "Poppins", sans-serif;
+}
+
+/* =====================================
+   CTA SECTION
+===================================== */
+
+.vv-footer-cta {
+  position: relative;
+  width: 100%;
+  min-height: 320px;
+
+  padding: 70px 8%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  background: linear-gradient(
+    120deg,
+    #002b5b 0%,
+    #003b78 60%,
+    #001f45 100%
+  );
+
+  border-bottom: 1px solid rgba(217, 154, 22, 0.25);
+}
+
+.vv-cta-content {
+  position: relative;
+  z-index: 2;
+  max-width: 650px;
+}
+
+.vv-cta-tag {
+  display: inline-block;
+
+  color: #f2c45a;
+
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 3px;
+
+  margin-bottom: 18px;
+}
+
+.vv-cta-content h2 {
+  font-size: clamp(30px, 4vw, 48px);
+  font-weight: 600;
+  line-height: 1.2;
+
+  margin: 0 0 18px;
+
+  color: #ffffff;
+}
+
+.vv-cta-content h2 span {
+  color: #d99a16;
+}
+
+.vv-cta-content p {
+  font-size: 15px;
+  line-height: 1.8;
+
+  color: rgba(255, 255, 255, 0.75);
+
+  max-width: 480px;
+
+  margin-bottom: 28px;
+}
+
+.vv-cta-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 18px;
+
+  padding: 14px 25px;
+
+  background: #d99a16;
+  color: #002b5b;
+
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+
+  border-radius: 5px;
+
+  transition: 0.3s ease;
+}
+
+.vv-cta-btn:hover {
+  background: #f2c45a;
+  transform: translateY(-3px);
+}
+
+.vv-cta-btn span {
+  font-size: 18px;
+}
+
+/* Decorative Circle */
+
+.vv-cta-decoration {
+  position: relative;
+
+  width: 250px;
+  height: 250px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+}
+
+.vv-gold-circle {
+  position: absolute;
+
+  width: 190px;
+  height: 190px;
+
+  border-radius: 50%;
+
+  background: rgba(217, 154, 22, 0.12);
+  border: 1px solid rgba(217, 154, 22, 0.5);
+}
+
+.vv-outline-circle {
+  position: absolute;
+
+  width: 230px;
+  height: 230px;
+
+  border-radius: 50%;
+
+  border: 1px dashed rgba(242, 196, 90, 0.45);
+}
+
+.vv-decoration-text {
+  position: relative;
+  z-index: 2;
+
+  text-align: center;
+
+  color: #f2c45a;
+
+  font-size: 25px;
+  font-weight: 700;
+  letter-spacing: 4px;
+  line-height: 1.4;
+}
+
+/* =====================================
+   MAIN FOOTER
+===================================== */
+
+.vv-footer-main {
+  width: 100%;
+
+  padding: 70px 8% 60px;
+
+  display: grid;
+
+  grid-template-columns: 1.5fr 1fr 1.2fr 1.4fr;
+
+  gap: 50px;
+}
+
+/* =====================================
+   BRAND
+===================================== */
+
+.vv-footer-brand {
+  max-width: 300px;
+}
+
+.vv-footer-logo {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #ffffff;
+
+  padding: 8px 12px;
+
+  border-radius: 50%;
+
+  margin-bottom: 22px;
+}
+
+.vv-footer-logo img {
+  width: 230px;
+  height: 90px;
+
+  object-fit: contain;
+
+  display: block;
+}
+
+.vv-footer-brand p {
+  color: rgba(255, 255, 255, 0.65);
+
+  font-size: 14px;
+  line-height: 1.8;
+
+  margin-bottom: 25px;
+}
+
+/* Social Links */
+
+.vv-footer-socials {
+  display: flex;
+  gap: 10px;
+}
+
+.vv-footer-socials a {
+  width: 38px;
+  height: 38px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  text-decoration: none;
+
+  color: #f2c45a;
+
+  border: 1px solid rgba(217, 154, 22, 0.35);
+
+  border-radius: 50%;
+
+  font-size: 11px;
+  font-weight: 600;
+
+  transition: 0.3s ease;
+}
+
+.vv-footer-socials a:hover {
+  background: #d99a16;
+  color: #002b5b;
+
+  transform: translateY(-4px);
+}
+
+/* =====================================
+   FOOTER COLUMNS
+===================================== */
+
+.vv-footer-column {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.vv-footer-column h3 {
+  color: #f2c45a;
+
+  font-size: 16px;
+  font-weight: 600;
+
+  margin: 0 0 12px;
+
+  position: relative;
+}
+
+.vv-footer-column h3::after {
+  content: "";
+
+  display: block;
+
+  width: 35px;
+  height: 2px;
+
+  background: #d99a16;
+
+  margin-top: 12px;
+}
+
+.vv-footer-column > a {
+  text-decoration: none;
+
+  color: rgba(255, 255, 255, 0.65);
+
+  font-size: 14px;
+
+  transition: 0.3s ease;
+}
+
+.vv-footer-column > a:hover {
+  color: #f2c45a;
+
+  transform: translateX(5px);
+}
+
+/* =====================================
+   CONTACT SECTION
+===================================== */
+
+.vv-contact-item {
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+}
+
+.vv-contact-icon {
+  width: 35px;
+  height: 35px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  border-radius: 50%;
+
+  background: rgba(217, 154, 22, 0.12);
+
+  color: #f2c45a;
+
+  font-size: 18px;
+}
+
+.vv-contact-item p,
+.vv-contact-item a {
+  margin: 0;
+
+  text-decoration: none;
+
+  color: rgba(255, 255, 255, 0.7);
+
+  font-size: 13px;
+
+  overflow-wrap: anywhere;
+
+  transition: 0.3s ease;
+}
+
+.vv-contact-item a:hover {
+  color: #f2c45a;
+}
+
+/* Contact Button */
+
+.vv-footer-contact-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 15px;
+
+  margin-top: 10px;
+
+  padding: 12px 18px;
+
+  background: rgba(217, 154, 22, 0.1);
+
+  border: 1px solid rgba(217, 154, 22, 0.35);
+
+  border-radius: 5px;
+
+  color: #f2c45a !important;
+
+  text-decoration: none;
+
+  font-size: 13px !important;
+
+  transition: 0.3s ease;
+}
+
+.vv-footer-contact-btn:hover {
+  background: #d99a16;
+  color: #002b5b !important;
+}
+
+/* =====================================
+   BOTTOM FOOTER
+===================================== */
+
+.vv-footer-bottom {
+  width: 100%;
+
+  padding: 22px 8%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 20px;
+  flex-wrap: wrap;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+
+  background: #00172f;
+}
+
+.vv-footer-bottom p {
+  margin: 0;
+
+  font-size: 12px;
+
+  color: rgba(255, 255, 255, 0.55);
+}
+
+.vv-footer-bottom-links {
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+}
+
+.vv-footer-bottom-links a {
+  text-decoration: none;
+
+  color: rgba(255, 255, 255, 0.55);
+
+  font-size: 12px;
+
+  transition: 0.3s ease;
+}
+
+.vv-footer-bottom-links a:hover {
+  color: #f2c45a;
+}
+
+.vv-footer-bottom-links span {
+  color: #d99a16;
+}
+
+.vv-footer-credit span {
+  color: #d99a16;
+}
+
+/* =====================================
+   RESPONSIVE DESIGN
+===================================== */
+
+@media (max-width: 1100px) {
+  .vv-footer-main {
+    grid-template-columns: 1fr 1fr;
+
+    gap: 45px;
+
+    padding: 60px 6%;
+  }
+
+  .vv-footer-cta {
+    padding: 60px 6%;
+  }
+
+  .vv-footer-bottom {
+    padding: 22px 6%;
+  }
+}
+
+@media (max-width: 700px) {
+  .vv-footer-cta {
+    min-height: auto;
+
+    padding: 55px 7%;
+  }
+
+  .vv-cta-decoration {
+    display: none;
+  }
+
+  .vv-footer-main {
+    grid-template-columns: 1fr 1fr;
+
+    gap: 35px 25px;
+
+    padding: 45px 7%;
+  }
+
+  .vv-footer-brand {
+    max-width: 100%;
+
+    grid-column: span 2;
+  }
+
+  .vv-footer-logo img {
+    width: 210px;
+    height: 80px;
+  }
+
+  .vv-footer-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+
+    padding: 25px 7%;
+  }
+}
+
+@media (max-width: 450px) {
+  .vv-footer-main {
+    grid-template-columns: 1fr;
+
+    gap: 35px;
+  }
+
+  .vv-footer-brand {
+    grid-column: auto;
+  }
+
+  .vv-footer-bottom-links {
+    flex-wrap: wrap;
+  }
+
+  .vv-cta-content h2 {
+    font-size: 30px;
+  }
+
+  .vv-cta-content p {
+    font-size: 13px;
+  }
+}
+
+/* =====================================
+   CONTACT HEADING + WHATSAPP
+===================================== */
+
+.vv-footer-contact-heading {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  margin-bottom: 12px;
+}
+
+.vv-footer-contact-heading h3 {
+  color: #f2c45a;
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0;
+  position: relative;
+}
+
+.vv-footer-contact-heading h3::after {
+  content: "";
+  display: block;
+  width: 35px;
+  height: 2px;
+  background: #d99a16;
+  margin-top: 12px;
+}
+
+/* WHATSAPP ICON */
+
+.vv-footer-whatsapp {
+  width: 34px;
+  height: 34px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  color: #25d366;
+  background: white;
+
+  border: 1px solid rgba(37, 211, 102, 0.25);
+  border-radius: 50%;
+
+  font-size: 20px;
+  text-decoration: none;
+
+  transition: all 0.35s ease;
+}
+
+.vv-footer-whatsapp:hover {
+  color: #ffffff;
+  background: #25d366;
+  border-color: #25d366;
+
+  transform: translateY(-3px);
+
+  box-shadow: 0 5px 15px rgba(37, 211, 102, 0.25);
+}
+

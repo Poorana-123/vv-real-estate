@@ -1,0 +1,273 @@
+.vv-interactive-map {
+  width: 100%;
+  height: 100%;
+  padding: 28px;
+  border-radius: 24px;
+  background: #f8f5ee;
+  overflow: hidden;
+  position: relative;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Heading */
+
+.vv-map-heading {
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+.vv-map-eyebrow {
+  color: #b58b36;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 3px;
+}
+
+.vv-map-heading h3 {
+  color: #102b46;
+  font-size: 25px;
+  line-height: 1.35;
+  margin: 12px 0;
+  font-weight: 700;
+}
+
+.vv-map-heading h3 span {
+  color: #b58b36;
+}
+
+.vv-map-heading p {
+  font-size: 12px;
+  color: #777;
+  line-height: 1.7;
+  max-width: 280px;
+  margin: 0 auto;
+}
+
+/* SVG Wrapper */
+
+.vv-map-svg-wrapper {
+  width: 100%;
+  max-width: 350px;
+  margin: 5px auto;
+  position: relative;
+}
+
+.vv-tamilnadu-svg {
+  width: 100%;
+  height: auto;
+  overflow: visible;
+}
+
+/* Background Circles */
+
+.vv-map-background-circle {
+  fill: #eee8da;
+  opacity: 0.7;
+}
+
+.vv-map-background-circle-inner {
+  fill: #e6ddca;
+  opacity: 0.45;
+}
+
+/* Map Shape */
+
+.vv-tamilnadu-shape {
+  fill: #173a59;
+  stroke: #b58b36;
+  stroke-width: 2.5;
+  stroke-linejoin: round;
+  filter: drop-shadow(0 8px 10px rgba(16, 43, 70, 0.15));
+  transition: fill 0.4s ease;
+}
+
+.vv-map-line {
+  stroke: rgba(255, 255, 255, 0.15);
+  stroke-width: 1.5;
+  stroke-dasharray: 4 5;
+  fill: none;
+}
+
+/* Clickable Locations */
+
+.vv-map-location {
+  cursor: pointer;
+  outline: none;
+}
+
+.vv-map-marker-pulse {
+  fill: #d4a94d;
+  opacity: 0.2;
+  transform-origin: center;
+  transition: all 0.3s ease;
+}
+
+.vv-map-marker {
+  fill: #d4a94d;
+  stroke: #fff;
+  stroke-width: 2.5;
+  transition: all 0.3s ease;
+}
+
+.vv-map-marker-center {
+  fill: #102b46;
+}
+
+.vv-map-location-label {
+  font-size: 11px;
+  font-weight: 600;
+  fill: #fff;
+  pointer-events: none;
+  paint-order: stroke;
+  stroke: #173a59;
+  stroke-width: 3px;
+  stroke-linejoin: round;
+}
+
+/* Hover */
+
+.vv-map-location:hover .vv-map-marker {
+  fill: #fff;
+  stroke: #d4a94d;
+  transform: scale(1.3);
+}
+
+.vv-map-location:hover .vv-map-location-label {
+  fill: #f5d58c;
+}
+
+/* Active Marker */
+
+.vv-map-location.active .vv-map-marker {
+  fill: #fff;
+  stroke: #d4a94d;
+  stroke-width: 3.5;
+  transform: scale(1.3);
+}
+
+.vv-map-location.active .vv-map-marker-pulse {
+  opacity: 0.5;
+  animation: vv-map-pulse 1.8s infinite;
+}
+
+.vv-map-location.active .vv-map-location-label {
+  fill: #f5d58c;
+  font-weight: 800;
+}
+
+/* Selected Location Info */
+
+.vv-map-selected-info {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: #102b46;
+  padding: 16px;
+  border-radius: 15px;
+  margin-top: 10px;
+  box-shadow: 0 8px 20px rgba(16, 43, 70, 0.1);
+}
+
+.vv-map-info-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  background: rgba(212, 169, 77, 0.15);
+  color: #d4a94d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+}
+
+.vv-map-selected-info span {
+  color: #c5ced8;
+  font-size: 10px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.vv-map-selected-info h4 {
+  color: #fff;
+  margin: 4px 0 0;
+  font-size: 17px;
+  font-weight: 600;
+}
+
+/* Location Buttons */
+
+.vv-map-location-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.vv-map-location-button {
+  flex: 1 1 calc(50% - 8px);
+  border: 1px solid #e1d7c4;
+  background: transparent;
+  color: #102b46;
+  padding: 11px 13px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 11px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.vv-map-location-button i {
+  font-size: 10px;
+  color: #b58b36;
+}
+
+.vv-map-location-button:hover,
+.vv-map-location-button.active {
+  background: #102b46;
+  border-color: #102b46;
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+.vv-map-location-button.active i {
+  color: #d4a94d;
+}
+
+/* Animation */
+
+@keyframes vv-map-pulse {
+  0% {
+    transform: scale(0.8);
+    opacity: 0.5;
+  }
+
+  50% {
+    transform: scale(1.5);
+    opacity: 0.2;
+  }
+
+  100% {
+    transform: scale(0.8);
+    opacity: 0.5;
+  }
+}
+
+/* Responsive */
+
+@media (max-width: 768px) {
+  .vv-interactive-map {
+    padding: 20px;
+  }
+
+  .vv-map-heading h3 {
+    font-size: 22px;
+  }
+
+  .vv-map-svg-wrapper {
+    max-width: 300px;
+  }
+}

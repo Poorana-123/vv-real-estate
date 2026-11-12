@@ -1,0 +1,309 @@
+/* ===============================
+   NAVBAR
+================================ */
+
+.vv-navbar {
+  position: absolute;
+  top: 25px;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  padding: 0 4%;
+  box-sizing: border-box;
+}
+
+.vv-navbar * {
+  box-sizing: border-box;
+}
+
+/* Navbar Container */
+
+.vv-navbar-container {
+  width: 100%;
+  max-width: 1350px;
+  margin: auto;
+
+  padding: 10px 24px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+
+  /* Light glass background for logo visibility */
+  background: rgba(255, 252, 245, 0.94);
+
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+
+  border: 1px solid rgba(217, 154, 22, 0.35);
+  border-radius: 22px;
+
+  box-shadow: 0 8px 30px rgba(0, 31, 69, 0.12);
+}
+
+/* ===============================
+   LOGO
+================================ */
+
+.vv-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  padding: 4px 8px;
+
+  
+  border-radius: 12px;
+}
+
+.vv-logo img {
+  width: 210px;
+  height: 75px;
+
+  max-width: 100%;
+
+  object-fit: contain;
+  object-position: center;
+
+  display: block;
+}
+
+/* ===============================
+   NAV LINKS
+================================ */
+
+.vv-nav-links {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+
+  padding: 5px;
+
+  border-radius: 40px;
+
+  background: rgba(0, 43, 91, 0.04);
+  border: 1px solid rgba(0, 43, 91, 0.10);
+
+  flex-shrink: 1;
+}
+
+.vv-nav-links a {
+  text-decoration: none;
+
+  color: #002b5b;
+
+  padding: 11px 17px;
+
+  border-radius: 30px;
+
+  font-size: 14px;
+  font-weight: 500;
+
+  white-space: nowrap;
+
+  transition: all 0.3s ease;
+}
+
+.vv-nav-links a:hover,
+.vv-nav-links a.active {
+  background: #002b5b;
+  color: #ffffff;
+}
+
+/* ===============================
+   NAV ACTIONS
+================================ */
+
+.vv-nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  flex-shrink: 0;
+}
+
+.vv-contact-btn,
+.vv-login-btn {
+  text-decoration: none;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 8px;
+
+  padding: 12px 20px;
+
+  border-radius: 30px;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  white-space: nowrap;
+
+  transition: all 0.3s ease;
+}
+
+/* Contact Button */
+
+.vv-contact-btn {
+  color: #002b5b;
+
+  border: 1px solid rgba(0, 43, 91, 0.25);
+
+  background: transparent;
+}
+
+.vv-contact-btn:hover {
+  background: #002b5b;
+  color: #ffffff;
+}
+
+/* Login Button */
+
+.vv-login-btn {
+  background: #d99a16;
+  color: #002b5b;
+
+  border: 1px solid #d99a16;
+}
+
+.vv-login-btn:hover {
+  background: #f2c45a;
+
+  transform: translateY(-2px);
+
+  box-shadow: 0 5px 15px rgba(217, 154, 22, 0.25);
+}
+
+/* ===============================
+   MOBILE MENU
+================================ */
+
+.vv-mobile-menu {
+  display: none;
+
+  background: #002b5b;
+  color: #ffffff;
+
+  border: none;
+
+  padding: 10px 12px;
+
+  border-radius: 10px;
+
+  font-size: 22px;
+
+  cursor: pointer;
+}
+
+/* ===============================
+   TABLET RESPONSIVE
+================================ */
+
+@media (max-width: 1100px) {
+  .vv-navbar {
+    padding: 0 3%;
+  }
+
+  .vv-navbar-container {
+    gap: 12px;
+    padding: 10px 18px;
+  }
+
+  .vv-logo img {
+    width: 175px;
+    height: 58px;
+  }
+
+  .vv-nav-links a {
+    padding: 10px 12px;
+    font-size: 13px;
+  }
+
+  .vv-contact-btn,
+  .vv-login-btn {
+    padding: 11px 15px;
+    font-size: 13px;
+  }
+}
+
+/* ===============================
+   MOBILE RESPONSIVE
+================================ */
+
+@media (max-width: 850px) {
+  .vv-navbar {
+    top: 15px;
+    padding: 0 15px;
+  }
+
+  .vv-navbar-container {
+    padding: 10px 14px;
+    border-radius: 16px;
+  }
+
+  .vv-logo img {
+    width: 165px;
+    height: 55px;
+  }
+
+  .vv-nav-links {
+    display: none;
+  }
+
+  .vv-mobile-menu {
+    display: block;
+  }
+
+  .vv-contact-btn {
+    display: none;
+  }
+
+  .vv-login-btn {
+    padding: 10px 15px;
+    font-size: 12px;
+  }
+}
+
+/* ===============================
+   SMALL MOBILE
+================================ */
+
+@media (max-width: 480px) {
+  .vv-navbar {
+    padding: 0 10px;
+    top: 12px;
+  }
+
+  .vv-navbar-container {
+    padding: 8px 10px;
+    gap: 8px;
+  }
+
+  .vv-logo {
+    padding: 2px 4px;
+  }
+
+  .vv-logo img {
+    width: 130px;
+    height: 48px;
+  }
+
+  .vv-nav-actions {
+    gap: 6px;
+  }
+
+  .vv-login-btn {
+    padding: 9px 12px;
+    font-size: 11px;
+  }
+
+  .vv-mobile-menu {
+    padding: 8px 10px;
+    font-size: 19px;
+  }
+}

@@ -1,0 +1,1041 @@
+
+/* =========================================
+   FIND LAND PAGE
+========================================= */
+
+.vv-findland-page {
+  width: 100%;
+  min-height: 100vh;
+  background: #f7f6f2;
+  color: #092c50;
+  font-family: "Poppins", sans-serif;
+  overflow: hidden;
+}
+
+.empty{
+  width: 100%;
+  height: 150px;
+  background-color: white;
+}
+
+/* =========================================
+   FILTER BAR
+========================================= */
+
+.vv-findland-filterbar {
+  width: 100%;
+  padding: 18px 4%;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+
+  background: #ffffff;
+  border-bottom: 1px solid #e8e5dc;
+
+  position: relative;
+  z-index: 20;
+}
+
+.vv-filter-item {
+  min-width: 150px;
+  flex: 1;
+
+  height: 48px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  padding: 0 14px;
+
+  background: #f9f8f5;
+  border: 1px solid #e3dfd5;
+  border-radius: 8px;
+
+  color: #c18b28;
+
+  transition: border-color 0.3s ease,
+              box-shadow 0.3s ease;
+
+  position: relative;
+}
+
+.vv-filter-item:hover {
+  border-color: #c18b28;
+}
+
+.vv-filter-item:focus-within {
+  border-color: #c18b28;
+  box-shadow: 0 0 0 3px rgba(193, 139, 40, 0.12);
+}
+
+.vv-filter-item svg {
+  flex-shrink: 0;
+  font-size: 13px;
+}
+
+.vv-filter-item select {
+  width: 100%;
+  height: 100%;
+
+  appearance: auto;
+  -webkit-appearance: menulist;
+
+  background: transparent;
+  border: none;
+  outline: none;
+
+  color: #092c50;
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 500;
+
+  cursor: pointer;
+
+  pointer-events: auto;
+  position: relative;
+  z-index: 2;
+}
+
+.vv-filter-item select option {
+  background: #ffffff;
+  color: #092c50;
+  padding: 10px;
+}
+
+/* CLEAR FILTER */
+
+.vv-filter-clear {
+  height: 48px;
+  padding: 0 18px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  background: #092c50;
+  color: #ffffff;
+
+  border: none;
+  border-radius: 8px;
+
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 500;
+
+  cursor: pointer;
+  flex-shrink: 0;
+
+  transition: all 0.3s ease;
+}
+
+.vv-filter-clear:hover {
+  background: #c18b28;
+  color: #092c50;
+}
+
+/* =========================================
+   SPLIT LAYOUT
+========================================= */
+
+.vv-findland-layout {
+  width: 100%;
+  min-height: calc(100vh - 85px);
+
+  display: grid;
+  grid-template-columns: 40% 60%;
+
+  align-items: stretch;
+}
+
+/* =========================================
+   MAP AREA
+========================================= */
+
+.vv-findland-map {
+  min-height: 650px;
+  height: calc(100vh - 85px);
+
+  position: sticky;
+  top: 0;
+
+  overflow: hidden;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(0, 31, 69, 0.2),
+      rgba(0, 31, 69, 0.5)
+    ),
+    url("https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=1600&q=90");
+
+  background-size: cover;
+  background-position: center;
+}
+
+/* MAP TOP LABEL */
+
+.vv-map-overlay-top {
+  position: absolute;
+  top: 22px;
+  left: 22px;
+  right: 22px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+
+  z-index: 2;
+}
+
+.vv-map-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  background: #ffffff;
+  color: #092c50;
+
+  padding: 10px 15px;
+  border-radius: 6px;
+
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.vv-map-label svg {
+  color: #c18b28;
+}
+
+.vv-map-location {
+  padding: 10px 15px;
+
+  background: rgba(255, 255, 255, 0.92);
+  border-radius: 6px;
+
+  color: #092c50;
+
+  font-size: 12px;
+  font-weight: 600;
+}
+
+/* MAP PRICE MARKERS */
+
+.vv-map-pins {
+  position: absolute;
+  inset: 0;
+}
+
+.vv-map-pin {
+  position: absolute;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  animation: vvPinFloat 3s ease-in-out infinite;
+}
+
+.vv-map-pin span {
+  background: #ffffff;
+  color: #092c50;
+
+  padding: 7px 12px;
+
+  border-radius: 20px;
+
+  font-size: 11px;
+  font-weight: 600;
+
+  white-space: nowrap;
+
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+}
+
+.vv-map-pin i {
+  width: 10px;
+  height: 10px;
+
+  margin-top: 5px;
+
+  background: #c18b28;
+  border: 2px solid #ffffff;
+
+  border-radius: 50%;
+}
+
+.vv-map-pin-1 {
+  top: 35%;
+  left: 25%;
+}
+
+.vv-map-pin-2 {
+  top: 50%;
+  left: 55%;
+  animation-delay: 0.4s;
+}
+
+.vv-map-pin-3 {
+  top: 65%;
+  left: 30%;
+  animation-delay: 0.8s;
+}
+
+.vv-map-pin-4 {
+  top: 30%;
+  left: 70%;
+  animation-delay: 1.2s;
+}
+
+.vv-map-pin-5 {
+  top: 72%;
+  left: 70%;
+  animation-delay: 1.6s;
+}
+
+.vv-map-pin-6 {
+  top: 45%;
+  left: 42%;
+  animation-delay: 2s;
+}
+
+@keyframes vvPinFloat {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-7px);
+  }
+}
+
+/* MAP BOTTOM */
+
+.vv-map-bottom {
+  position: absolute;
+  left: 22px;
+  right: 22px;
+  bottom: 22px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+
+  color: #ffffff;
+  font-size: 11px;
+  font-weight: 500;
+
+  background: rgba(0, 31, 69, 0.7);
+
+  padding: 12px 16px;
+  border-radius: 6px;
+
+  backdrop-filter: blur(10px);
+}
+
+/* =========================================
+   PROPERTY LISTINGS
+========================================= */
+
+.vv-findland-listings {
+  min-width: 0;
+  padding: 30px 28px 50px;
+}
+
+/* HEADER */
+
+.vv-findland-listing-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 20px;
+
+  margin-bottom: 25px;
+}
+
+.vv-findland-eyebrow {
+  display: block;
+
+  color: #c18b28;
+
+  font-size: 10px;
+  font-weight: 700;
+
+  letter-spacing: 2px;
+
+  margin-bottom: 10px;
+}
+
+.vv-findland-listing-header h1 {
+  color: #092c50;
+
+  font-size: clamp(20px, 2vw, 28px);
+  font-weight: 600;
+
+  margin: 0 0 8px;
+}
+
+.vv-findland-listing-header p {
+  color: #777b82;
+
+  font-size: 12px;
+  line-height: 1.7;
+
+  margin: 0;
+}
+
+.vv-findland-count {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+
+  flex-shrink: 0;
+}
+
+.vv-findland-count strong {
+  color: #c18b28;
+
+  font-size: 25px;
+  font-weight: 600;
+}
+
+.vv-findland-count span {
+  color: #777b82;
+  font-size: 11px;
+}
+
+/* =========================================
+   SEARCH + SORT TOOLBAR
+========================================= */
+
+.vv-findland-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+
+  margin-bottom: 22px;
+}
+
+.vv-findland-search {
+  min-width: 0;
+  flex: 1;
+
+  height: 44px;
+
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  padding: 0 14px;
+
+  background: #ffffff;
+  border: 1px solid #e7e3db;
+  border-radius: 7px;
+
+  color: #c18b28;
+}
+
+.vv-findland-search input {
+  width: 100%;
+
+  border: none;
+  outline: none;
+  background: transparent;
+
+  color: #092c50;
+
+  font-family: inherit;
+  font-size: 12px;
+}
+
+.vv-findland-search input::placeholder {
+  color: #9a9a9a;
+}
+
+.vv-findland-sort {
+  height: 44px;
+  min-width: 155px;
+
+  padding: 0 12px;
+
+  background: #ffffff;
+  border: 1px solid #e7e3db;
+  border-radius: 7px;
+
+  color: #092c50;
+
+  font-family: inherit;
+  font-size: 11px;
+
+  cursor: pointer;
+  outline: none;
+}
+
+.vv-findland-sort:focus {
+  border-color: #c18b28;
+}
+
+/* =========================================
+   PROPERTY GRID
+========================================= */
+
+.vv-findland-property-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+
+/* PROPERTY CARD */
+
+.vv-findland-property-card {
+  min-width: 0;
+
+  background: #ffffff;
+
+  border: 1px solid #ece8df;
+  border-radius: 9px;
+
+  overflow: hidden;
+
+  box-shadow: 0 4px 15px rgba(0, 31, 69, 0.04);
+
+  transition: transform 0.35s ease,
+              box-shadow 0.35s ease,
+              border-color 0.35s ease;
+}
+
+.vv-findland-property-card:hover {
+  transform: translateY(-5px);
+
+  border-color: rgba(193, 139, 40, 0.45);
+
+  box-shadow: 0 12px 30px rgba(0, 31, 69, 0.1);
+}
+
+/* IMAGE */
+
+.vv-property-image {
+  height: 210px;
+
+  position: relative;
+  overflow: hidden;
+
+  background: #e9e5dc;
+}
+
+.vv-property-image img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  display: block;
+
+  transition: transform 0.7s ease;
+}
+
+.vv-findland-property-card:hover .vv-property-image img {
+  transform: scale(1.06);
+}
+
+/* FAVORITE */
+
+.vv-property-favorite {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+
+  width: 35px;
+  height: 35px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: none;
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.95);
+
+  color: #092c50;
+
+  cursor: pointer;
+
+  transition: all 0.3s ease;
+}
+
+.vv-property-favorite:hover {
+  background: #ffffff;
+  color: #d94b4b;
+  transform: scale(1.1);
+}
+
+.vv-property-favorite.active {
+  color: #d94b4b;
+}
+
+/* IMAGE TAG */
+
+.vv-property-image-tag {
+  position: absolute;
+  left: 14px;
+  bottom: 14px;
+
+  padding: 7px 12px;
+
+  background: rgba(0, 31, 69, 0.82);
+  color: #ffffff;
+
+  border-radius: 4px;
+
+  font-size: 10px;
+  font-weight: 500;
+
+  backdrop-filter: blur(8px);
+}
+
+/* PROPERTY DETAILS */
+
+.vv-property-details {
+  padding: 17px 16px;
+}
+
+.vv-property-price-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+
+  margin-bottom: 12px;
+}
+
+.vv-property-price-row h2 {
+  margin: 0;
+
+  color: #092c50;
+
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.vv-property-area {
+  padding: 6px 9px;
+
+  background: #f8f5ed;
+  border: 1px solid #e9dfc9;
+  border-radius: 20px;
+
+  color: #a7791d;
+
+  font-size: 10px;
+  font-weight: 500;
+
+  white-space: nowrap;
+}
+
+.vv-property-details h3 {
+  color: #092c50;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  margin: 0 0 8px;
+}
+
+.vv-property-description {
+  color: #858585;
+
+  font-size: 11px;
+  line-height: 1.6;
+
+  margin: 0 0 14px;
+}
+
+/* LOCATION */
+
+.vv-property-location {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  padding-bottom: 14px;
+
+  border-bottom: 1px solid #efede8;
+
+  color: #777b82;
+
+  font-size: 11px;
+}
+
+.vv-property-location svg {
+  color: #c18b28;
+  font-size: 12px;
+}
+
+/* CARD BOTTOM */
+
+.vv-property-card-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+
+  padding-top: 14px;
+}
+
+.vv-property-purpose {
+  color: #092c50;
+
+  font-size: 10px;
+  font-weight: 600;
+
+  background: #f3f4f0;
+
+  padding: 7px 10px;
+  border-radius: 4px;
+}
+
+.vv-property-view-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  padding: 9px 12px;
+
+  border: 1px solid #c18b28;
+  border-radius: 5px;
+
+  background: transparent;
+  color: #092c50;
+
+  font-family: inherit;
+  font-size: 10px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: all 0.3s ease;
+}
+
+.vv-property-view-btn:hover {
+  background: #c18b28;
+  color: #ffffff;
+}
+
+.vv-property-view-btn svg {
+  font-size: 10px;
+}
+
+/* =========================================
+   EMPTY STATE
+========================================= */
+
+.vv-findland-empty {
+  min-height: 350px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  padding: 30px;
+
+  text-align: center;
+
+  background: #ffffff;
+  border: 1px solid #ece8df;
+  border-radius: 10px;
+}
+
+.vv-findland-empty-icon {
+  width: 65px;
+  height: 65px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #f8f3e8;
+  color: #c18b28;
+
+  border-radius: 50%;
+
+  font-size: 20px;
+
+  margin-bottom: 20px;
+}
+
+.vv-findland-empty h2 {
+  color: #092c50;
+
+  font-size: 20px;
+  font-weight: 600;
+
+  margin: 0 0 10px;
+}
+
+.vv-findland-empty p {
+  color: #777b82;
+
+  font-size: 12px;
+  line-height: 1.7;
+
+  margin: 0 0 20px;
+}
+
+.vv-findland-empty button {
+  padding: 12px 22px;
+
+  background: #092c50;
+  color: #ffffff;
+
+  border: none;
+  border-radius: 5px;
+
+  font-family: inherit;
+  font-size: 12px;
+
+  cursor: pointer;
+
+  transition: all 0.3s ease;
+}
+
+.vv-findland-empty button:hover {
+  background: #c18b28;
+  color: #092c50;
+}
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 1200px) {
+  .vv-findland-layout {
+    grid-template-columns: 35% 65%;
+  }
+
+  .vv-findland-listings {
+    padding: 25px 20px 40px;
+  }
+
+  .vv-property-image {
+    height: 180px;
+  }
+
+  .vv-findland-property-grid {
+    gap: 15px;
+  }
+}
+
+@media (max-width: 900px) {
+  .vv-findland-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .vv-findland-map {
+    position: relative;
+    top: auto;
+
+    height: 350px;
+    min-height: 350px;
+  }
+
+  .vv-findland-listings {
+    padding: 30px 5%;
+  }
+
+  .vv-findland-filterbar {
+    padding: 15px 5%;
+  }
+
+  .vv-filter-item {
+    min-width: 180px;
+  }
+}
+
+@media (max-width: 600px) {
+  .vv-findland-filterbar {
+    gap: 10px;
+  }
+
+  .vv-filter-item {
+    min-width: calc(50% - 5px);
+    flex: 1 1 calc(50% - 5px);
+  }
+
+  .vv-filter-clear {
+    width: 100%;
+  }
+
+  .vv-findland-listing-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .vv-findland-count {
+    align-items: flex-start;
+  }
+
+  .vv-findland-toolbar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .vv-findland-search {
+    width: 100%;
+    flex: auto;
+  }
+
+  .vv-findland-sort {
+    width: 100%;
+  }
+
+  .vv-findland-property-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .vv-property-image {
+    height: 230px;
+  }
+
+  .vv-findland-listings {
+    padding: 25px 4%;
+  }
+
+  .vv-findland-listing-header h1 {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 380px) {
+  .vv-filter-item {
+    min-width: 100%;
+    flex: 1 1 100%;
+  }
+
+  .vv-property-price-row h2 {
+    font-size: 17px;
+  }
+
+  .vv-property-area {
+    font-size: 9px;
+  }
+}
+/* INTERACTIVE MAP CONTAINER */
+.vv-findland-map-infographic {
+  position: relative;
+  width: 100%;
+  height: 600px;
+  overflow: hidden;
+  padding: 0;
+  background: #092542;
+  border-radius: 24px;
+  isolation: isolate;
+  margin-left: 10px;
+}
+
+/* MAP IMAGE */
+.vv-findland-map-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  object-fit: fill;
+  object-position: center;
+  pointer-events: none;
+  user-select: none;
+}
+
+/* CLICKABLE LOCATION CIRCLES */
+.vv-map-hotspot {
+  position: absolute;
+  z-index: 10;
+
+  width: 4.5%;
+  aspect-ratio: 1 / 1;
+  height: auto;
+
+  min-width: 15px;
+  min-height: 15px;
+
+  padding: 0;
+  border: 1.5px solid transparent;
+  border-radius: 50%;
+
+  background: transparent;
+  cursor: pointer;
+
+  transform: translate(-50%, -50%);
+
+  pointer-events: auto;
+
+  transition:
+    border-color 180ms ease,
+    background 180ms ease,
+    box-shadow 180ms ease;
+}
+
+/* HOVER AND ACTIVE EFFECT */
+.vv-map-hotspot:hover,
+.vv-map-hotspot:focus-visible,
+.vv-map-hotspot.active {
+  border-color: rgba(242, 190, 73, 0.98);
+
+  background: rgba(242, 190, 73, 0.10);
+
+  box-shadow:
+    0 0 0 2px rgba(242, 190, 73, 0.12),
+    0 0 10px rgba(242, 190, 73, 0.35);
+
+  outline: none;
+}
+
+/* CHENNAI */
+.vv-map-hotspot-chennai {
+  left: 78.4%;
+  top: 20.5%;
+}
+
+/* COIMBATORE */
+.vv-map-hotspot-coimbatore {
+  left: 53.8%;
+  top: 34%;
+}
+
+/* DINDIGUL */
+.vv-map-hotspot-dindigul {
+  left: 59.4%;
+  top: 52%;
+}
+
+/* THENI */
+.vv-map-hotspot-theni {
+  left: 47.5%;
+  top: 64%;
+}
+
+/* MADURAI */
+.vv-map-hotspot-madurai {
+  left: 63.3%;
+  top: 72.5%;
+}
+
+/* TABLET AND MOBILE */
+@media (max-width: 768px) {
+  .vv-findland-map-infographic {
+    height: 580px;
+    border-radius: 18px;
+  }
+
+  .vv-map-hotspot {
+    width: 5%;
+    min-width: 13px;
+    min-height: 13px;
+  }
+}
