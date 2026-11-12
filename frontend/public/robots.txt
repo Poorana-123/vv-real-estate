@@ -1,0 +1,5 @@
+
+User-agent: *
+Allow: /
+
+Sitemap: https://frontend-e2u4-eight.vercel.app/sitemap.xml
