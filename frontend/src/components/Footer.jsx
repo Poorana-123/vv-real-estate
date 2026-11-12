@@ -3,6 +3,7 @@ import React from "react";
 import "../styles/Footer.css";
 import Logo from "../assets/vetri-vinayaga-traders-bg.png";
 import { FaWhatsapp } from "react-icons/fa";
+import {Link} from "react-router-dom";
 
 function Footer() {
   return (
@@ -31,22 +32,22 @@ function Footer() {
         <div className="vv-footer-column">
           <h3>Quick Links</h3>
 
-          <a href="/">Home</a>
-          <a href="/about">About Us</a>
-          <a href="/properties">Available Lands</a>
-          <a href="/services">Our Services</a>
-          <a href="/contact">Contact Us</a>
+          <Link to="/">Home</Link>
+          <Link to="/about">About Us</Link>
+          <Link to="/properties">Available Lands</Link>
+          <Link to="/services">Our Services</Link>
+          <Link to="/contact">Contact Us</Link>
         </div>
 
         {/* SERVICES */}
         <div className="vv-footer-column">
           <h3>Our Expertise</h3>
 
-          <a href="/properties">Residential Plots</a>
-          <a href="/properties">Agricultural Lands</a>
-          <a href="/properties">Investment Lands</a>
-          <a href="/services">Land Consultation</a>
-          <a href="/services">Property Assistance</a>
+          <Link to="/properties">Residential Plots</Link>
+          <Link to="/properties">Agricultural Lands</Link>
+          <Link to="/properties">Investment Lands</Link>
+          <Link to="/services">Land Consultation</Link>
+          <Link to="/services">Property Assistance</Link>
         </div>
 
         {/* CONTACT */}
