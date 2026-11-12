@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-
+import { Helmet } from "react-helmet-async";
 import {
   ArrowRight,
   ShieldCheck,
@@ -19,6 +19,14 @@ import "../styles/About.css";
 function About() {
   return (
     <div className="vv-about-page">
+      <Helmet>
+  <title>About Vetri Vinayaga Traders | Trusted Real Estate</title>
+
+  <meta
+    name="description"
+    content="Learn about Vetri Vinayaga Traders, your trusted partner for residential plots, land investment opportunities, and real estate services in Tamil Nadu."
+  />
+</Helmet>
 
       {/* ================= HERO SECTION ================= */}
 

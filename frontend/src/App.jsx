@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 
 // Components
 import Navbar from "./components/Navbar";
@@ -16,7 +16,7 @@ import FindLand from "./pages/FindLand";
 
 function App() {
   return (
-    <BrowserRouter>
+    
       <div className="vv-app">
         <HashScroll />
 
@@ -45,7 +45,7 @@ function App() {
         <Footer />
 
       </div>
-    </BrowserRouter>
+    
   );
 }
 

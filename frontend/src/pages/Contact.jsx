@@ -1,4 +1,5 @@
 import React from "react";
+import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import {
   ArrowRight,
@@ -35,6 +36,16 @@ const Contact = () => {
 
   return (
     <main className="vv-contact-page">
+      <Helmet>
+  <title>
+    Contact Vetri Vinayaga Traders | Enquire About Properties
+  </title>
+
+  <meta
+    name="description"
+    content="Contact Vetri Vinayaga Traders for enquiries about residential plots and land investment opportunities in Chennai and Tamil Nadu. Connect with our team."
+  />
+</Helmet>
 
       {/* HERO SECTION */}
       <section className="vv-contact-hero">

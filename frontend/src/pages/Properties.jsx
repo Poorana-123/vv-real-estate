@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-
+import { Helmet } from "react-helmet-async";
 import {
   ArrowRight,
   ArrowUpRight,
@@ -138,7 +138,16 @@ function Properties() {
   return (
     <div className="vv-properties-page">
 
+<Helmet>
+  <title>
+    Explore Premium Plots & Properties in Chennai | Vetri Vinayaga
+  </title>
 
+  <meta
+    name="description"
+    content="Explore residential plots and land properties in Chennai. Discover suitable locations, plot options, and land investment opportunities with Vetri Vinayaga Traders."
+  />
+</Helmet>
       
 {/* ================= PROPERTIES EDITORIAL HERO ================= */}
 

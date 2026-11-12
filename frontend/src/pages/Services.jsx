@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 import {
   ArrowRight,
   LandPlot,
@@ -172,6 +173,16 @@ function Services() {
 
   return (
     <main className="vv-services-page">
+      <Helmet>
+  <title>
+    Real Estate Services in Chennai | Vetri Vinayaga Traders
+  </title>
+
+  <meta
+    name="description"
+    content="Explore real estate services from Vetri Vinayaga Traders, including residential plots, land investment assistance, property guidance, and land selection."
+  />
+</Helmet>
 
       {/* ================= HERO SECTION ================= */}
 

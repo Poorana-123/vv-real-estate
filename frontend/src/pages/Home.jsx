@@ -14,7 +14,7 @@ import {
   Building2,
   Landmark,
 } from "lucide-react";
-
+import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 
 import "../styles/Home.css";
@@ -82,6 +82,16 @@ const categories = [
 function Home() {
   return (
     <div className="vv-home">
+      <Helmet>
+        <title>
+          Vetri Vinayaga Traders | Premium Plots & Land in Chennai
+        </title>
+
+        <meta
+          name="description"
+          content="Discover premium residential plots and land investment opportunities in Chennai and Tamil Nadu with Vetri Vinayaga Traders. Find your ideal property today."
+        />
+      </Helmet>
 
       {/* ================= HERO SECTION ================= */}
 
