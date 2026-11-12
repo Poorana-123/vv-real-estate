@@ -1,3 +1,4 @@
+
 /* ===============================
    NAVBAR
 ================================ */
@@ -16,7 +17,9 @@
   box-sizing: border-box;
 }
 
-/* Navbar Container */
+/* ===============================
+   NAVBAR CONTAINER
+================================ */
 
 .vv-navbar-container {
   width: 100%;
@@ -30,8 +33,7 @@
   align-items: center;
   gap: 20px;
 
-  /* Light glass background for logo visibility */
-  background: rgba(255, 252, 245, 0.94);
+  background: rgba(255, 252, 245, 0.96);
 
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
@@ -52,17 +54,13 @@
   justify-content: center;
 
   flex-shrink: 0;
-
   padding: 4px 8px;
-
-  
   border-radius: 12px;
 }
 
 .vv-logo img {
   width: 210px;
   height: 75px;
-
   max-width: 100%;
 
   object-fit: contain;
@@ -72,16 +70,15 @@
 }
 
 /* ===============================
-   NAV LINKS
+   DESKTOP NAV LINKS
 ================================ */
 
 .vv-nav-links {
   display: flex;
   align-items: center;
-  gap: 5px;
+  gap: 4px;
 
   padding: 5px;
-
   border-radius: 40px;
 
   background: rgba(0, 43, 91, 0.04);
@@ -92,11 +89,9 @@
 
 .vv-nav-links a {
   text-decoration: none;
-
   color: #002b5b;
 
-  padding: 11px 17px;
-
+  padding: 11px 15px;
   border-radius: 30px;
 
   font-size: 14px;
@@ -114,7 +109,7 @@
 }
 
 /* ===============================
-   NAV ACTIONS
+   DESKTOP ACTIONS
 ================================ */
 
 .vv-nav-actions {
@@ -135,8 +130,7 @@
 
   gap: 8px;
 
-  padding: 12px 20px;
-
+  padding: 12px 17px;
   border-radius: 30px;
 
   font-size: 14px;
@@ -151,9 +145,7 @@
 
 .vv-contact-btn {
   color: #002b5b;
-
   border: 1px solid rgba(0, 43, 91, 0.25);
-
   background: transparent;
 }
 
@@ -162,110 +154,246 @@
   color: #ffffff;
 }
 
-/* Login Button */
+/* Explore Button */
 
 .vv-login-btn {
   background: #d99a16;
   color: #002b5b;
-
   border: 1px solid #d99a16;
 }
 
 .vv-login-btn:hover {
   background: #f2c45a;
-
   transform: translateY(-2px);
-
   box-shadow: 0 5px 15px rgba(217, 154, 22, 0.25);
 }
 
 /* ===============================
-   MOBILE MENU
+   MOBILE MENU BUTTON
 ================================ */
 
 .vv-mobile-menu {
   display: none;
 
+  align-items: center;
+  justify-content: center;
+
   background: #002b5b;
   color: #ffffff;
 
   border: none;
-
   padding: 10px 12px;
 
-  border-radius: 10px;
-
-  font-size: 22px;
-
+  border-radius: 12px;
   cursor: pointer;
+
+  transition: all 0.3s ease;
+}
+
+.vv-mobile-menu:hover {
+  background: #d99a16;
+  color: #002b5b;
 }
 
 /* ===============================
-   TABLET RESPONSIVE
+   MOBILE DROPDOWN
 ================================ */
 
-@media (max-width: 1100px) {
+.vv-mobile-dropdown {
+  display: none;
+
+  width: calc(100% - 30px);
+  max-width: 500px;
+
+  margin: 10px auto 0;
+
+  padding: 0;
+
+  background: rgba(255, 252, 245, 0.98);
+
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+
+  border: 1px solid rgba(217, 154, 22, 0.35);
+  border-radius: 18px;
+
+  box-shadow: 0 12px 35px rgba(0, 31, 69, 0.15);
+
+  overflow: hidden;
+
+  opacity: 0;
+  transform: translateY(-10px);
+
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease;
+}
+
+.vv-mobile-dropdown.open {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Mobile Links */
+
+.vv-mobile-nav-links {
+  display: flex;
+  flex-direction: column;
+
+  padding: 12px;
+  gap: 5px;
+}
+
+.vv-mobile-nav-links a {
+  text-decoration: none;
+
+  color: #002b5b;
+
+  padding: 13px 16px;
+
+  border-radius: 10px;
+
+  font-size: 14px;
+  font-weight: 500;
+
+  transition: all 0.3s ease;
+}
+
+.vv-mobile-nav-links a:hover,
+.vv-mobile-nav-links a.active {
+  background: #002b5b;
+  color: #ffffff;
+}
+
+/* Mobile Buttons */
+
+.vv-mobile-actions {
+  display: flex;
+  flex-direction: column;
+
+  gap: 10px;
+
+  padding: 12px 16px 18px;
+
+  border-top: 1px solid rgba(0, 43, 91, 0.10);
+}
+
+.vv-mobile-contact,
+.vv-mobile-explore {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 8px;
+
+  text-decoration: none;
+
+  padding: 12px 16px;
+
+  border-radius: 30px;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  transition: all 0.3s ease;
+}
+
+.vv-mobile-contact {
+  color: #002b5b;
+  border: 1px solid rgba(0, 43, 91, 0.25);
+}
+
+.vv-mobile-contact:hover {
+  background: #002b5b;
+  color: #ffffff;
+}
+
+.vv-mobile-explore {
+  background: #d99a16;
+  color: #002b5b;
+}
+
+.vv-mobile-explore:hover {
+  background: #f2c45a;
+}
+
+/* ===============================
+   LARGE TABLET
+================================ */
+
+@media (max-width: 1200px) {
   .vv-navbar {
     padding: 0 3%;
   }
 
   .vv-navbar-container {
     gap: 12px;
-    padding: 10px 18px;
+    padding: 10px 16px;
   }
 
   .vv-logo img {
-    width: 175px;
-    height: 58px;
+    width: 170px;
+    height: 60px;
   }
 
   .vv-nav-links a {
-    padding: 10px 12px;
+    padding: 10px 11px;
     font-size: 13px;
   }
 
   .vv-contact-btn,
   .vv-login-btn {
-    padding: 11px 15px;
-    font-size: 13px;
+    padding: 10px 13px;
+    font-size: 12px;
   }
 }
 
 /* ===============================
-   MOBILE RESPONSIVE
+   TABLET / MOBILE
 ================================ */
 
-@media (max-width: 850px) {
+@media (max-width: 950px) {
   .vv-navbar {
-    top: 15px;
-    padding: 0 15px;
+    top: 18px;
+    padding: 0 20px;
   }
 
   .vv-navbar-container {
-    padding: 10px 14px;
-    border-radius: 16px;
+    padding: 10px 16px;
+    border-radius: 18px;
   }
 
   .vv-logo img {
-    width: 165px;
-    height: 55px;
+    width: 170px;
+    height: 58px;
   }
+
+  /* Hide Desktop Navigation */
 
   .vv-nav-links {
     display: none;
   }
 
-  .vv-mobile-menu {
-    display: block;
-  }
-
-  .vv-contact-btn {
+  .vv-nav-actions {
     display: none;
   }
 
-  .vv-login-btn {
-    padding: 10px 15px;
-    font-size: 12px;
+  /* Show Mobile Menu */
+
+  .vv-mobile-menu {
+    display: flex;
+  }
+
+  .vv-mobile-dropdown {
+    display: block;
+    visibility: hidden;
+    pointer-events: none;
+  }
+
+  .vv-mobile-dropdown.open {
+    visibility: visible;
+    pointer-events: auto;
   }
 }
 
@@ -275,13 +403,15 @@
 
 @media (max-width: 480px) {
   .vv-navbar {
-    padding: 0 10px;
     top: 12px;
+    padding: 0 10px;
   }
 
   .vv-navbar-container {
     padding: 8px 10px;
     gap: 8px;
+
+    border-radius: 15px;
   }
 
   .vv-logo {
@@ -289,21 +419,36 @@
   }
 
   .vv-logo img {
-    width: 130px;
+    width: 135px;
     height: 48px;
   }
 
-  .vv-nav-actions {
-    gap: 6px;
+  .vv-mobile-menu {
+    padding: 9px 10px;
+    border-radius: 10px;
   }
 
-  .vv-login-btn {
-    padding: 9px 12px;
-    font-size: 11px;
+  .vv-mobile-dropdown {
+    width: 100%;
+    border-radius: 15px;
+  }
+}
+
+/* ===============================
+   EXTRA SMALL MOBILE
+================================ */
+
+@media (max-width: 360px) {
+  .vv-navbar-container {
+    padding: 7px 8px;
+  }
+
+  .vv-logo img {
+    width: 115px;
+    height: 42px;
   }
 
   .vv-mobile-menu {
-    padding: 8px 10px;
-    font-size: 19px;
+    padding: 8px;
   }
 }

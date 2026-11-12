@@ -1,23 +1,28 @@
 
-import { NavLink } from "react-router-dom";
-import { Menu, Phone } from "lucide-react";
+import { useState } from "react";
+import { NavLink, Link } from "react-router-dom";
+import { Menu, Phone, X, ArrowUpRight } from "lucide-react";
 import "../styles/Navbar.css";
 import Logo from "../assets/vetri-vinayaga-traders-bg.png";
 
 function Navbar() {
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const closeMenu = () => setMenuOpen(false);
+
   return (
     <header className="vv-navbar">
       <div className="vv-navbar-container">
 
         {/* Logo */}
-        <NavLink to="/" className="vv-logo">
+        <Link to="/" className="vv-logo" onClick={closeMenu}>
           <img
             src={Logo}
             alt="Vetri Vinayaga Traders Logo"
           />
-        </NavLink>
+        </Link>
 
-        {/* Navigation */}
+        {/* Desktop Navigation */}
         <nav className="vv-nav-links">
           <NavLink to="/" end>
             Home
@@ -40,28 +45,79 @@ function Navbar() {
           </NavLink>
         </nav>
 
-        {/* Buttons */}
+        {/* Desktop Actions */}
         <div className="vv-nav-actions">
-
-          <NavLink to="/contact#vv-contact-main" className="vv-contact-btn">
+          <Link
+            to="/contact#vv-contact-main"
+            className="vv-contact-btn"
+          >
             <Phone size={16} />
             Contact Us
-          </NavLink>
+          </Link>
 
-          <NavLink to="/properties#vv-properties-listing" className="vv-login-btn">
+          <Link
+            to="/properties#vv-properties-listing"
+            className="vv-login-btn"
+          >
             Explore Properties
-          </NavLink>
-
+            <ArrowUpRight size={16} />
+          </Link>
         </div>
 
-        {/* Mobile Menu */}
+        {/* Mobile Menu Button */}
         <button
           className="vv-mobile-menu"
-          aria-label="Open navigation menu"
+          aria-label={menuOpen ? "Close navigation menu" : "Open navigation menu"}
+          aria-expanded={menuOpen}
+          onClick={() => setMenuOpen(!menuOpen)}
         >
-          <Menu size={26} />
+          {menuOpen ? <X size={25} /> : <Menu size={25} />}
         </button>
+      </div>
 
+      {/* Mobile Navigation */}
+      <div className={`vv-mobile-dropdown ${menuOpen ? "open" : ""}`}>
+        <nav className="vv-mobile-nav-links">
+          <NavLink to="/" end onClick={closeMenu}>
+            Home
+          </NavLink>
+
+          <NavLink to="/about" onClick={closeMenu}>
+            About Us
+          </NavLink>
+
+          <NavLink to="/properties" onClick={closeMenu}>
+            Properties
+          </NavLink>
+
+          <NavLink to="/services" onClick={closeMenu}>
+            Services
+          </NavLink>
+
+          <NavLink to="/contact" onClick={closeMenu}>
+            Contact
+          </NavLink>
+        </nav>
+
+        <div className="vv-mobile-actions">
+          <Link
+            to="/contact#vv-contact-main"
+            className="vv-mobile-contact"
+            onClick={closeMenu}
+          >
+            <Phone size={16} />
+            Contact Us
+          </Link>
+
+          <Link
+            to="/properties#vv-properties-listing"
+            className="vv-mobile-explore"
+            onClick={closeMenu}
+          >
+            Explore Properties
+            <ArrowUpRight size={16} />
+          </Link>
+        </div>
       </div>
     </header>
   );
